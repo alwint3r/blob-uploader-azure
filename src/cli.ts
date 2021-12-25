@@ -7,4 +7,5 @@ yargs(hideBin(process.argv))
   .commandDir("commands")
   .strict()
   .alias({ "h": "help" })
+  .demandCommand()
   .argv;
