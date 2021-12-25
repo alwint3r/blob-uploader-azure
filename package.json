@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "package:mac": "pkg . --targets node16-macos-x64 --output blob-uploader-macos",
-    "package:linux": "pkg . --targets node16-linux-x64 --output blob-uploader-linux-x64"
+    "package": "pkg . --targets node16-macos-x64,node16-linux-x64 --out-path ./executables/"
   },
   "bin": {
     "blob-uploader-azure": "./build/cli.js"

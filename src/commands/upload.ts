@@ -45,10 +45,6 @@ export const handler = async (argv: Options) => {
   const blobService = new BlobServiceClient(getBlobServiceUrl(account, token));
   const containerClient = blobService.getContainerClient(container);
 
-  await containerClient.createIfNotExists({
-    access: "blob",
-  });
-
   const filename = basename(file);
   const blobClient = containerClient.getBlockBlobClient(filename);
 
